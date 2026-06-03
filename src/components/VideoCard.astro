@@ -1,0 +1,47 @@
+---
+import type { Video } from "@/data/videos";
+
+type Props = Video;
+
+const { title, description, youtubeUrl, thumbnail } = Astro.props;
+---
+
+<li class="my-6">
+  {
+    thumbnail && (
+      <div class="border-border mb-3 overflow-hidden rounded border">
+        <img
+          src={thumbnail}
+          alt={title}
+          class="h-48 w-full object-cover"
+        />
+      </div>
+    )
+  }
+
+  <a
+    href={youtubeUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class:list={[
+      "text-accent inline-block text-lg font-medium",
+      "decoration-dashed underline-offset-4 hover:underline",
+      "focus-visible:no-underline focus-visible:underline-offset-0",
+    ]}
+  >
+    <h3>{title}</h3>
+  </a>
+
+  <p class="mt-2">{description}</p>
+
+  <div class="mt-3">
+    <a
+      href={youtubeUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-accent inline-flex items-center gap-1 text-sm hover:underline"
+    >
+      Watch on YouTube →
+    </a>
+  </div>
+</li>

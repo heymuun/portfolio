@@ -1,0 +1,73 @@
+---
+import type { Project } from "@/data/projects";
+import LinkButton from "./LinkButton.astro";
+
+type Props = Project;
+
+const { title, description, technologies, image, githubUrl, demoUrl } =
+  Astro.props;
+
+const primaryUrl = demoUrl || githubUrl;
+---
+
+<li class="my-6">
+  {
+    primaryUrl ? (
+      <a
+        href={primaryUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class:list={[
+          "text-accent inline-block text-lg font-medium",
+          "decoration-dashed underline-offset-4 hover:underline",
+          "focus-visible:no-underline focus-visible:underline-offset-0",
+        ]}
+      >
+        <h3>{title}</h3>
+      </a>
+    ) : (
+      <h3 class="text-lg font-medium">{title}</h3>
+    )
+  }
+
+  <p class="mt-2">{description}</p>
+
+  {
+    technologies.length > 0 && (
+      <div class="mt-3 flex flex-wrap gap-2">
+        {technologies.map(tech => (
+          <span class="text-muted-foreground border-border inline-block border rounded px-2 py-1 text-xs font-medium">
+            {tech}
+          </span>
+        ))}
+      </div>
+    )
+  }
+
+  {
+    (githubUrl || demoUrl) && (
+      <div class="mt-3 flex gap-3">
+        {githubUrl && (
+          <LinkButton
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-accent text-sm hover:underline"
+          >
+            GitHub
+          </LinkButton>
+        )}
+        {demoUrl && (
+          <LinkButton
+            href={demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-accent text-sm hover:underline"
+          >
+            Demo
+          </LinkButton>
+        )}
+      </div>
+    )
+  }
+</li>

@@ -3,35 +3,47 @@ title: "About"
 description: "A bit about me and this blog."
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+## About Me
 
-![Astro Paper](@/assets/images/astropaper-og.jpg)
+I'm **Heymun Pareek**, a cybersecurity student at **ABV-IIITM Gwalior**, passionate about information security and hands-on learning through practical challenges and real-world scenarios.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+## Education
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+**Integrated B.Tech + M.Tech in Information Technology**  
+ABV-IIITM Gwalior
 
-## Features
+## Certifications
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+- NSDC & IIT Madras Pravartak Ethical Hacking with AI
+- AWS Cloud Practitioner Essentials
+- Introduction to Splunk
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+## Skills
 
-and so much more.
+- **Operating Systems & Networks**: Linux, Computer Networks, Operating Systems
+- **Security Tools**: Wireshark
+- **Programming & Scripting**: Bash, Python
 
-## Show your support
+## Projects
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+- **CryptaDex SOC Dashboard** - Security Operations Center dashboard for threat monitoring and analysis
+- **Fingerprintify File Hash Calculator** - File hashing and integrity verification tool
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
+## Platforms & Communities
 
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
+Connect with me across various cybersecurity and learning platforms:
 
-Kyay zuu! 🙏🏼
+- **GitHub**: [github.com/heymuun](https://github.com/heymuun)
+- **LinkedIn**: [linkedin.com/in/heymun-pareek](https://www.linkedin.com/in/heymun-pareek/)
+- **YouTube**: [@heymuun](https://www.youtube.com/@heymuun)
+- **DEV Community**: [dev.to/ff02x9e](https://dev.to/ff02x9e)
+- **TryHackMe**: [tryhackme.com/p/ff02x9e](https://tryhackme.com/p/ff02x9e)
+- **HackTheBox**: [My Profile](https://profile.hackthebox.com/profile/019c4d16-45f0-7037-998a-7e3aa35f78e6)
+- **PicoCTF**: [Academy Profile](https://learn.cylabacademy.org/users/vibingvigils)
+- **X (Twitter)**: [@TheRedHatHacker](https://x.com/TheRedHatHacker)
+
+## About This Site
+
+This portfolio documents my cybersecurity journey, including projects, certifications, learning progress, and future content. I use this space to share writeups, blog posts, and showcase my progress across CTF platforms and security challenges.
+
+Feel free to reach out via [email](mailto:heymun.microsoft@gmail.com) or connect on any of the platforms above.

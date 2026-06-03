@@ -9,9 +9,17 @@ import Footer from "@/components/Footer.astro";
 import Socials from "@/components/Socials.astro";
 import Card from "@/components/Card.astro";
 import LinkButton from "@/components/LinkButton.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import CertificationCard from "@/components/CertificationCard.astro";
+import PlatformCard from "@/components/PlatformCard.astro";
+import VideoCard from "@/components/VideoCard.astro";
 import { getSortedPosts } from "@/utils/getSortedPosts";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
+import { projects } from "@/data/projects";
+import { certifications } from "@/data/certifications";
+import { platforms } from "@/data/platforms";
+import { videos } from "@/data/videos";
 
 const { socials, posts: postsConfig } = config;
 
@@ -23,6 +31,10 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 const homePath = getRelativeLocaleUrl(locale, "");
+
+// Portfolio sections
+const featuredProjects = projects.filter(p => p.featured);
+const featuredVideos = videos.slice(0, 2);
 ---
 
 <Layout>
@@ -35,7 +47,7 @@ const homePath = getRelativeLocaleUrl(locale, "");
   >
     <section id="hero" class="border-border border-b pt-8 pb-6">
       <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Mingalaba
+        Welcome
       </h1>
       <a
         target="_blank"
@@ -53,19 +65,7 @@ const homePath = getRelativeLocaleUrl(locale, "");
       </a>
 
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
-      </p>
-      <p class="mt-2">
-        Read the blog posts or check
-        <LinkButton
-          class="hover:text-accent underline decoration-dashed underline-offset-4"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
+        I'm a cybersecurity student at ABV-IIITM Gwalior, documenting my journey through projects, certifications, and learning across multiple platforms.
       </p>
       {
         socials.length > 0 && (
@@ -78,6 +78,83 @@ const homePath = getRelativeLocaleUrl(locale, "");
         )
       }
     </section>
+
+    <!-- Featured Projects Section -->
+    {
+      featuredProjects.length > 0 && (
+        <section
+          id="featured-projects"
+          class="border-border border-b pt-12 pb-6"
+        >
+          <h2 class="text-2xl font-semibold tracking-wide">Featured Projects</h2>
+          <p class="mt-2 mb-6 text-base text-muted-foreground">
+            A showcase of my key cybersecurity projects and hands-on learning work.
+          </p>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {featuredProjects.map(project => (
+              <ProjectCard {...project} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <!-- Certifications Section -->
+    {
+      certifications.length > 0 && (
+        <section
+          id="certifications"
+          class="border-border border-b pt-12 pb-6"
+        >
+          <h2 class="text-2xl font-semibold tracking-wide">Certifications</h2>
+          <p class="mt-2 mb-6 text-base text-muted-foreground">
+            Professional certifications that validate my expertise in cybersecurity and cloud technologies.
+          </p>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {certifications.map(cert => (
+              <CertificationCard {...cert} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <!-- Platforms Section -->
+    {
+      platforms.length > 0 && (
+        <section id="platforms" class="border-border border-b pt-12 pb-6">
+          <h2 class="text-2xl font-semibold tracking-wide">Learning Platforms</h2>
+          <p class="mt-2 mb-6 text-base text-muted-foreground">
+            Online platforms where I practice and compete in cybersecurity challenges and CTF competitions.
+          </p>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {platforms.map(platform => (
+              <PlatformCard {...platform} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <!-- Featured Videos Section -->
+    {
+      featuredVideos.length > 0 && (
+        <section
+          id="featured-videos"
+          class="border-border border-b pt-12 pb-6"
+        >
+          <h2 class="text-2xl font-semibold tracking-wide">Featured Videos</h2>
+          <p class="mt-2 mb-6 text-base text-muted-foreground">
+            Video content covering cybersecurity topics, tutorials, and project walkthroughs.
+          </p>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {featuredVideos.map(video => (
+              <VideoCard {...video} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
 
     {
       featuredPosts.length > 0 && (

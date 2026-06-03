@@ -1,0 +1,24 @@
+---
+import type { Platform } from "@/data/platforms";
+
+type Props = Platform;
+
+const { name, description, url } = Astro.props;
+---
+
+<li class="my-6">
+  <a
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
+    class:list={[
+      "text-accent inline-block text-lg font-medium",
+      "decoration-dashed underline-offset-4 hover:underline",
+      "focus-visible:no-underline focus-visible:underline-offset-0",
+    ]}
+  >
+    <h3>{name}</h3>
+  </a>
+
+  <p class="mt-2">{description}</p>
+</li>
