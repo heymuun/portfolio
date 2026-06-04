@@ -1,3 +1,16 @@
+---
+author: "Heymun Pareek"
+pubDatetime: 2026-06-04T20:00:00Z
+title: "HomeLab Session 1: Understanding What a Server Really Is"
+description: "Building a simple HTTP server from a laptop and exposing it through a home network using Python and NAT port forwarding."
+featured: false
+draft: false
+tags:
+  - homelab
+  - networking
+  - cybersecurity
+  - python
+---
 # HomeLab Session 1: Understanding What a Server Really Is
 
 Before setting up any infrastructure, it is worth answering a simple question: **what exactly is a server?**
@@ -26,7 +39,7 @@ For this experiment, I used Python's built-in HTTP server to expose a directory 
 
 Choose the directory you want to expose through the HTTP server.
 
-![Directory myfiles having notes.pdf](../../assets/images/HomeLab%20\[1]%20SERVER/1.png)
+![Directory myfiles having notes.pdf](../../assets/images/homelab1/1.png)
 
 ---
 
@@ -46,7 +59,7 @@ python -m http.server 5000
 
 I chose port **5000** because other commonly used ports on my system were already occupied. The specific port number is not important as long as the process can successfully bind to it.
 
-![Running Python HTTP Server](../../assets/images/2.png)
+![Running Python HTTP Server](../../assets/images/homelab1/2.png)
 
 ---
 
@@ -60,7 +73,7 @@ ipconfig
 
 Locate the IPv4 address associated with your active network adapter.
 
-![ipconfig command in Windows](../../assets/images/HomeLab%20\[1]%20SERVER/3.png)
+![ipconfig command in Windows](../../assets/images/homelab1/3.png)
 
 ---
 
@@ -98,7 +111,7 @@ The exact address varies by manufacturer.
 
 Once logged in, navigate to the NAT or Port Forwarding configuration page and create a rule that forwards incoming traffic on port **5000** to the laptop's private IP address.
 
-![Router NAT configuration](../../assets/images/HomeLab%20\[1]%20SERVER/4.png)
+![Router NAT configuration](../../assets/images/homelab1/4.png)
 
 With the forwarding rule in place, requests arriving at the router's public IP address can be routed directly to the Python HTTP server running on the laptop.
 
