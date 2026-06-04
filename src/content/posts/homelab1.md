@@ -10,9 +10,6 @@ tags:
   - networking
   - cybersecurity
   - python
-
-# HomeLab Session 1: Understanding What a Server Really Is
-
 ---
 
 Before setting up any infrastructure, it is worth answering a simple question: **what exactly is a server?**
