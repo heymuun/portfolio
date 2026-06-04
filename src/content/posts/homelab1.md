@@ -1,6 +1,6 @@
 ---
 author: "Heymun Pareek"
-pubDatetime: 2026-06-04T20:00:00Z
+pubDatetime: 2026-06-04T10:00:00Z
 title: "HomeLab Session 1: Understanding What a Server Really Is"
 description: "Building a simple HTTP server from a laptop and exposing it through a home network using Python and NAT port forwarding."
 featured: false
