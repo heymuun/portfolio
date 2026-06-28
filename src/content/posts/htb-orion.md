@@ -64,7 +64,7 @@ We dive deeper into the database
 
 Finally we obtain juicy information
 ![](../../assets/images/htb-orion/file-20260629000750973.png)
-We notice that the password is hashed using **bcrypt** by noticing its format. Please refer to [Hash Identification Reference Guide]([https://github.com/heymuun/notes](https://dev.to/ff02x9e/hash-identification-reference-guide-3kl7)) for interesting details regarding hash identification and related tooling that can be used.
+We notice that the password is hashed using **bcrypt** by noticing its format. Please refer to [Hash Identification Reference Guide](https://dev.to/ff02x9e/hash-identification-reference-guide-3kl7) for interesting details regarding hash identification and related tooling that can be used.
 
 We can then crack this hash using hashcat (with -m 3200)
 ![](../../assets/images/htb-orion/file-20260629002644944.png)
