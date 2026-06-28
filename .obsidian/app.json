@@ -1,5 +1,6 @@
 {
   "attachmentFolderPath": "/",
   "newFileLocation": "folder",
-  "newFileFolderPath": "src/content/posts"
+  "newFileFolderPath": "src/content/posts",
+  "useMarkdownLinks": true
 }
